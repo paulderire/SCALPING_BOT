@@ -1,0 +1,27 @@
+# Python cache and env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Runtime data
+logs/
+*.log
+
+# Local app data/state
+.desktop_profile/
+.desktop_edge_profile/
+data/*.json
+
+# OS/editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temp/debug artifacts
+_tmp*
+.tmp*
+_live_probe*
+_sanity_check.py

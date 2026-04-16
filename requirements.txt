@@ -1,0 +1,19 @@
+# Core dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+
+# MetaTrader 5 (for live trading)
+MetaTrader5>=5.0.45
+
+# Optional: for advanced features
+matplotlib>=3.7.0  # For plotting equity curves
+seaborn>=0.12.0    # For visualization
+ta-lib>=0.4.0      # Additional technical indicators (requires separate installation)
+
+# Optional: for web-based monitoring
+flask>=2.3.0       # Web interface
+plotly>=5.14.0     # Interactive charts
+pywebview>=5.1     # Native desktop window wrapper (no manual browser)
+
+# Optional: for notifications
+python-telegram-bot>=20.0  # Telegram notifications
