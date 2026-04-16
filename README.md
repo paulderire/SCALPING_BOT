@@ -68,6 +68,72 @@ python run_bot.py
 python btc_walkforward.py --profile balanced --train-days 21 --test-days 7 --folds 4
 ```
 
+### 5. Desktop App Launch (Recommended)
+
+Use the desktop launcher so you do not need to manually open a browser.
+
+```bash
+# One-time shortcut setup
+powershell -ExecutionPolicy Bypass -File .\CreateDesktopShortcut.ps1
+
+# Start desktop app directly
+.\start_desktop_app.bat
+```
+
+The launcher starts the dashboard backend (if needed), opens the desktop window, and attempts MT5 reconnect.
+
+---
+
+## 🚢 Production Deployment
+
+### Pre-Production Checklist
+
+- [ ] MT5 terminal installed and logged in
+- [ ] Algo trading enabled in MT5 settings
+- [ ] Strategy validated on demo account
+- [ ] Risk limits set in `config.py`
+- [ ] Daily loss limits reviewed
+- [ ] Email/push alerts tested
+
+### Windows Startup Deployment
+
+1. Run shortcut setup once:
+
+```bash
+powershell -ExecutionPolicy Bypass -File .\CreateDesktopShortcut.ps1
+```
+
+2. This creates:
+- Desktop launcher shortcut
+- Startup folder shortcut (auto-start on login)
+
+3. Reboot and verify:
+- Desktop app opens correctly
+- Dashboard status updates live
+- Bot controls (Start/Stop) respond
+
+### Clean Repository Policy
+
+The repository intentionally excludes local runtime artifacts:
+- `.venv/`
+- `logs/`
+- local data JSON state files
+- temporary `_tmp*` / probe files
+
+Use `.gitignore` to keep pushes clean and production-safe.
+
+---
+
+## 🏷️ Release
+
+Current stable release: **v1.0.0**
+
+Release includes:
+- Desktop app launcher flow stabilization
+- Fixed dashboard script parse/runtime failures affecting buttons
+- Fallback tab and status handling improvements
+- Cleaned repository and deployment shortcut updates
+
 ---
 
 ## 📋 Strategy Overview
